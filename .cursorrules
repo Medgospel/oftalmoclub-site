@@ -1,0 +1,3 @@
+- The code should be componentized when there is oportunity to do, but not always.
+- the style should use tailwind, and the theme should be in tailwind config
+- should use smooth animations and transitions with motion framer
