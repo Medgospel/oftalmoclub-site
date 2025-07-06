@@ -18,7 +18,7 @@ export interface PessoaFisicaData {
   nome: string
   cpf: string
   data_nascimento: string
-  sexo: number
+  sexo: string
   // codigo_indicacao: string
 }
 
@@ -85,7 +85,7 @@ export const pessoaFisicaService = {
     nome: string
     cpf: string
     dataNascimento: string
-    sexo: number
+    sexo: string
     email: string
     senha: string
     telefone: string

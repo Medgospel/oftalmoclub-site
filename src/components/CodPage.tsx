@@ -29,8 +29,8 @@ import {
 
 const tiposLogradouro = ['Rua', 'Avenida', 'Travessa', 'Alameda', 'Praça', 'Estrada', 'Rodovia']
 const sexos = [
-  { id: 4, fk_dominio: "SEXO", fk_valor: "M - Masculino", status: true },
-  { id: 5, fk_dominio: "SEXO", fk_valor: "F - Feminino", status: true }
+  { id: 'M', fk_dominio: "SEXO", fk_valor: "M - Masculino", status: true },
+  { id: 'F', fk_dominio: "SEXO", fk_valor: "F - Feminino", status: true }
 ]
 
 
@@ -52,7 +52,7 @@ function CodPage() {
       nome: 'João Silva',
       cpf: '086.558.993.30',
       dataNascimento: '2024-03-18',
-      sexo: 4,
+      sexo: 'M',
       email: 'joaosilva123@gmail.com',
       senha: '',
       telefone: '(86) 9 9999-9999',
@@ -487,15 +487,15 @@ function CodPage() {
                                 <div className="sexo-field">
                                   <Label htmlFor="sexo" className="mb-5 text-xs font-semibold text-gray-500">Sexo</Label>
                                   <Select 
-                                    value={watchedValues.sexo?.toString()} 
-                                    onValueChange={(value) => setValue('sexo', parseInt(value))}
+                                    value={watchedValues.sexo} 
+                                    onValueChange={(value) => setValue('sexo', value)}
                                   >
                                     <SelectTrigger id="sexo" className={errors.sexo ? 'border-red-500' : ''}>
                                       <SelectValue placeholder="Selecione" />
                                     </SelectTrigger>
                                     <SelectContent>
                                       {sexos.map(sexo => (
-                                        <SelectItem key={sexo.id} value={sexo.id.toString()}>
+                                        <SelectItem key={sexo.id} value={sexo.id}>
                                           {sexo.fk_valor}
                                         </SelectItem>
                                       ))}

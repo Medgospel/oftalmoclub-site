@@ -93,9 +93,9 @@ export const codPageSchema = z.object({
       return age >= 18 && age <= 120
     }, 'Idade deve estar entre 18 e 120 anos'),
   
-  sexo: z.number()
+  sexo: z.string()
     .min(1, 'Sexo é obrigatório')
-    .refine((sexo) => [4, 5].includes(sexo), 'Sexo deve ser válido'),
+    .refine((sexo) => ['M', 'F'].includes(sexo), 'Sexo deve ser M ou F'),
   
   email: z.string()
     .min(1, 'E-mail é obrigatório')
