@@ -1,3 +1,8 @@
 - The code should be componentized when there is oportunity to do, but not always.
 - the style should use tailwind, and the theme should be in tailwind config
 - should use smooth animations and transitions with motion framer
+- Use lucide icons for icons
+- use shadcn components when possible
+- should always make the components responsive
+- look at the Clean API.yaml file when asked about something you need to request
+- always add services related, in the folder services that uses the api file for making requests.
