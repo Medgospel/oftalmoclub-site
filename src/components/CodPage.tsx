@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
@@ -37,6 +37,7 @@ const sexos = [
 
 function CodPage() {
   const { code } = useParams()
+  const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState('pessoal')
   const [mostrarSenha, setMostrarSenha] = useState(false)
   const [isLoadingCep, setIsLoadingCep] = useState(false)
@@ -235,9 +236,10 @@ function CodPage() {
       
       if (result.success) {
         toast.success('Cadastro realizado com sucesso!')
-        // Optionally redirect or clear form
+        // Redirect to welcome page
+        navigate('/welcome')
       } else {
-        toast.error(`Erro no cadastro: ${result.error || 'Erro desconhecido'}`)
+        toast.error('Erro no cadastro. Tente novamente.')
       }
     } catch (error) {
       console.error('Erro ao enviar cadastro:', error)
