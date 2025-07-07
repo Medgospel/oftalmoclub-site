@@ -42,7 +42,7 @@ export interface IndicadorResponse extends Array<Indicador> {}
 export const pessoaFisicaService = {
   // Create new pessoa fisica
   async createPessoaFisica(data: PessoaFisicaData) {
-    const response = await fetch('https://hope-healing-api.onrender.com/v1/pessoa-fisica/app/', {
+    const response = await fetch('https://98.84.138.10.nip.io/v1/pessoa-fisica/app/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ export const pessoaFisicaService = {
 
   // Get indicators by codigo_indicacao
   async getIndicadorByCodigo(codigoIndicacao: string) {
-    const response = await fetch(`https://hope-healing-api.onrender.com/v1/pessoa-fisica/indicadores/?codigo_indicacao=${codigoIndicacao}`, {
+    const response = await fetch(`https://98.84.138.10.nip.io/v1/pessoa-fisica/indicadores/?codigo_indicacao=${codigoIndicacao}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

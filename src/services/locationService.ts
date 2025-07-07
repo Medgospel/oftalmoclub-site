@@ -42,7 +42,7 @@ export const locationService = {
 
   // Get cities by state (UF)
   async getCidadesByState(uf: string) {
-    const response = await fetch(`https://hope-healing-api.onrender.com/v1/cidades/?uf=${uf}`)
+    const response = await fetch(`https://98.84.138.10.nip.io/v1/cidades/?uf=${uf}`)
     const data: CidadesResponse = await response.json()
     
     if (response.ok) {
