@@ -42,9 +42,8 @@ export const locationService = {
 
   // Get cities by state (UF)
   async getCidadesByState(uf: string) {
-    // Use local proxy to avoid CORS issues
-    const response = await fetch(`/cidades/?uf=${uf}`)
-    const data = await response.json()
+    const response = await fetch(`https://hope-healing-api.onrender.com/v1/cidades/?uf=${uf}`)
+    const data: CidadesResponse = await response.json()
     
     if (response.ok) {
       return { success: true, data }

@@ -42,8 +42,7 @@ export interface IndicadorResponse extends Array<Indicador> {}
 export const pessoaFisicaService = {
   // Create new pessoa fisica
   async createPessoaFisica(data: PessoaFisicaData) {
-    // Use fetch directly to bypass the base URL and use the Vite proxy
-    const response = await fetch('/pessoa-fisica/app/', {
+    const response = await fetch('https://hope-healing-api.onrender.com/v1/pessoa-fisica/app/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -63,8 +62,7 @@ export const pessoaFisicaService = {
 
   // Get indicators by codigo_indicacao
   async getIndicadorByCodigo(codigoIndicacao: string) {
-    // Use fetch directly to bypass the base URL and use the Vite proxy
-    const response = await fetch(`/pessoa-fisica/indicadores/?codigo_indicacao=${codigoIndicacao}`, {
+    const response = await fetch(`https://hope-healing-api.onrender.com/v1/pessoa-fisica/indicadores/?codigo_indicacao=${codigoIndicacao}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
