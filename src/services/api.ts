@@ -11,7 +11,7 @@ export interface ApiResponse<T = any> {
 }
 
 // Base API configuration
-const API_BASE_URL = 'https://hope-healing-api.onrender.com/v1'
+const API_BASE_URL = 'https://98.84.138.10.nip.io/v1'
 
 // Create API instance
 export const api = create({
