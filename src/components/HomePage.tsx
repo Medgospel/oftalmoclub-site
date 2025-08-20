@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { Link } from 'react-router-dom'
 import { 
   Download, 
   Smartphone, 
@@ -9,7 +10,8 @@ import {
   Shield, 
   Clock,
   Play,
-  Apple
+  Apple,
+  FileText
 } from 'lucide-react'
 
 function HomePage() {
@@ -186,6 +188,15 @@ function HomePage() {
             transition={{ duration: 0.6, delay: 1 }}
             className="text-center mt-12 pt-8 border-t border-blue-400/30"
           >
+            <div className="mb-4">
+              <Link 
+                to="/privacy-policy"
+                className="inline-flex items-center text-blue-200 hover:text-white transition-colors duration-200 text-sm underline"
+              >
+                <FileText className="h-4 w-4 mr-2" />
+                Política de Privacidade
+              </Link>
+            </div>
             <p className="text-blue-200 text-sm">
               © 2024 MedGospel. Todos os direitos reservados.
             </p>
