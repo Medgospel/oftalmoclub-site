@@ -7,6 +7,7 @@ import PrivacyPolicyPage from './components/PrivacyPolicyPage'
 
 function App() {
   return (
+    
     <Router>
       <div className="App">
         <Routes>
