@@ -336,7 +336,7 @@ function CodPage() {
   return (
     <>
       <div className="flex flex-col items-center bg-[#2176bf] pt-10 pb-2">
-        <img src="/logo_branca.png" alt="medgospel logo" className="h-15 mb-0" />
+        <img src="/logo_branca.png" alt="oftalmoclub logo" className="h-15 mb-0" />
       </div>
       <div className="min-h-screen bg-[#2176bf] py-8">
         <style>{`
